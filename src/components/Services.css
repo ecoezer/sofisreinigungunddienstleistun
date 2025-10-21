@@ -1,78 +1,96 @@
 .services {
-  background: #fafafa;
+  background: white;
+  padding: 5rem 2rem;
+}
+
+.services h2 {
+  color: #1e4d8b;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 
 .services-intro {
   text-align: center;
-  font-size: 1rem;
-  color: #525252;
-  margin-bottom: 2.5rem;
-  max-width: 640px;
+  font-size: 1.125rem;
+  color: #333;
+  margin-bottom: 3rem;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.25rem;
-  margin-top: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .service-card {
   background: white;
-  padding: 1.75rem;
-  border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  transition: all 0.2s ease;
+  padding: 2.5rem;
+  border-radius: 0;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
   text-align: center;
 }
 
 .service-card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(0, 0, 0, 0.12);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  transform: translateY(-4px);
+  border-color: #1e4d8b;
+  box-shadow: 0 8px 24px rgba(30, 77, 139, 0.15);
 }
 
 .service-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  filter: grayscale(30%);
-  opacity: 0.9;
-  transition: all 0.2s ease;
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  filter: grayscale(0%);
+  opacity: 1;
+  transition: all 0.3s ease;
 }
 
 .service-card:hover .service-icon {
-  filter: grayscale(0%);
-  opacity: 1;
+  transform: scale(1.1);
 }
 
 .service-card h3 {
-  font-size: 1.125rem;
-  color: #1a1a1a;
-  margin-bottom: 0.5rem;
+  font-size: 1.375rem;
+  color: #1e4d8b;
+  margin-bottom: 1rem;
   font-weight: 600;
-  letter-spacing: -0.01em;
 }
 
 .service-card p {
-  color: #525252;
-  line-height: 1.5;
-  font-size: 0.9375rem;
+  color: #555;
+  line-height: 1.6;
+  font-size: 1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
+  .services {
+    padding: 4rem 2rem;
+  }
+
+  .services h2 {
+    font-size: 2rem;
+  }
+
   .services-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   .service-card {
-    padding: 1.5rem;
+    padding: 2rem;
   }
 
   .service-icon {
-    font-size: 2.25rem;
+    font-size: 3rem;
   }
 }

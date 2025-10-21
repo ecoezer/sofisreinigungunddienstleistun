@@ -12,23 +12,15 @@ function Hero() {
     <section id="home" className="hero">
       <div className="hero-overlay"></div>
       <div className="hero-content">
-        <h1>Professionelle Reinigungsdienste</h1>
+        <h1>Unsere Leistungen im Überblick</h1>
         <p className="hero-subtitle">
-          Wir sorgen für Sauberkeit und Ordnung in Ihrem Zuhause und Büro
+          Wir bieten Ihnen ein umfassendes Leistungsspektrum rund um Reinigung, Pflege und Betreuung von Immobilien.
+          Ob Gebäudereinigung, Hausmeisterservice oder der Verkauf von Reinigungsmitteln – bei uns finden Sie
+          passgenaue Lösungen für Ihre Anforderungen. Unser erfahrenes Team arbeitet zuverlässig, gründlich und mit
+          vollem Einsatz. Entdecken Sie hier unsere Leistungen auf einen Blick.
         </p>
-        <div className="hero-features">
-          <div className="feature-badge">
-            <span>Zuverlässig</span>
-          </div>
-          <div className="feature-badge">
-            <span>Erfahren</span>
-          </div>
-          <div className="feature-badge">
-            <span>Gründlich</span>
-          </div>
-        </div>
         <button className="cta-button" onClick={scrollToContact}>
-          Jetzt Angebot anfragen
+          Jetzt Kontakt aufnehmen!
         </button>
       </div>
     </section>
