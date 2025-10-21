@@ -1,0 +1,125 @@
+.fab-main {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  border: none;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fab-main:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 32px rgba(16, 185, 129, 0.5);
+}
+
+.fab-main.open {
+  transform: rotate(90deg);
+}
+
+.fab-menu {
+  position: fixed;
+  bottom: 5.5rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 998;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(20px);
+}
+
+.fab-menu.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.fab-action {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: fadeInUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fab-menu.open .fab-action:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.fab-menu.open .fab-action:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.fab-menu.open .fab-action:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.fab-action:hover {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  border-color: var(--primary);
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.3);
+}
+
+.fab-action:hover svg path {
+  stroke: white;
+}
+
+.fab-action svg {
+  width: 24px;
+  height: 24px;
+}
+
+.fab-action svg path {
+  stroke: var(--primary);
+  transition: stroke 0.3s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 969px) {
+  .fab-main,
+  .fab-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .fab-main {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .fab-menu {
+    bottom: 5rem;
+    right: 1.5rem;
+  }
+}

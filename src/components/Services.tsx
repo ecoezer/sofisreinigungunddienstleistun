@@ -1,36 +1,37 @@
 import './Services.css'
+import { HomeIcon, OfficeIcon, WindowIcon, SparkleIcon, CarpetIcon, IronIcon } from './Icons'
 
 function Services() {
   const services = [
     {
       title: 'Haushaltsreinigung',
       description: 'Gründliche Reinigung Ihrer Wohnräume, Küche, Badezimmer und aller Wohnbereiche.',
-      icon: '🏠'
+      Icon: HomeIcon
     },
     {
       title: 'Büroreinigung',
       description: 'Professionelle Reinigung von Büros, Besprechungsräumen und Arbeitsbereichen.',
-      icon: '🏢'
+      Icon: OfficeIcon
     },
     {
       title: 'Fensterreinigung',
       description: 'Streifenfreie Reinigung Ihrer Fenster innen und außen für klare Sicht.',
-      icon: '🪟'
+      Icon: WindowIcon
     },
     {
       title: 'Grundreinigung',
       description: 'Intensive Tiefenreinigung für Umzug, Renovierung oder nach Bauarbeiten.',
-      icon: '✨'
+      Icon: SparkleIcon
     },
     {
       title: 'Teppichreinigung',
       description: 'Schonende und effektive Reinigung von Teppichen und Polstermöbeln.',
-      icon: '🧹'
+      Icon: CarpetIcon
     },
     {
       title: 'Bügel-Service',
       description: 'Professionelles Bügeln Ihrer Wäsche und Textilien nach höchsten Standards.',
-      icon: '👔'
+      Icon: IronIcon
     }
   ]
 
@@ -45,7 +46,9 @@ function Services() {
         <div className="services-grid">
           {services.map((service, index) => (
             <div key={index} className="service-card">
-              <div className="service-icon">{service.icon}</div>
+              <div className="service-icon">
+                <service.Icon />
+              </div>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
             </div>

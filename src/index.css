@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
   --primary: #10b981;
@@ -37,4 +36,45 @@ body {
 
 #root {
   min-height: 100vh;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-on-scroll.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.animate-on-scroll.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.animate-on-scroll.delay-3 {
+  animation-delay: 0.3s;
+}
+
+.animate-on-scroll.delay-4 {
+  animation-delay: 0.4s;
 }

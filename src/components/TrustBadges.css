@@ -1,0 +1,87 @@
+.trust-badges {
+  background: white;
+  padding: 3rem 3rem;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.badge-item {
+  text-align: center;
+  padding: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 12px;
+}
+
+.badge-item:hover {
+  transform: translateY(-4px);
+  background: var(--bg-secondary);
+}
+
+.badge-icon {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.badge-icon svg {
+  filter: drop-shadow(0 2px 8px rgba(16, 185, 129, 0.2));
+  transition: all 0.3s ease;
+}
+
+.badge-item:hover .badge-icon svg {
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(0 4px 12px rgba(16, 185, 129, 0.3));
+}
+
+.badge-item h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.25rem;
+}
+
+.badge-subtitle {
+  font-size: 1rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.badge-description {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 968px) {
+  .trust-badges {
+    padding: 2rem 2rem;
+  }
+
+  .badges-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .badges-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .badge-item {
+    padding: 1.25rem;
+  }
+}

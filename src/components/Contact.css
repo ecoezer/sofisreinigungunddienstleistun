@@ -61,9 +61,15 @@
 }
 
 .info-icon {
-  font-size: 1.5rem;
   min-width: 32px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-icon svg {
+  width: 24px;
+  height: 24px;
 }
 
 .info-item h4 {

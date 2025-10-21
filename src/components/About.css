@@ -172,11 +172,14 @@
   background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
   color: white;
   border-radius: 50%;
-  font-size: 2rem;
-  font-weight: bold;
   margin-bottom: 1.5rem;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.benefit-icon svg {
+  width: 32px;
+  height: 32px;
 }
 
 .benefit:hover .benefit-icon {

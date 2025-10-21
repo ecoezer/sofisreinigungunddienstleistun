@@ -1,8 +1,56 @@
 import './About.css'
+import { CheckIcon } from './Icons'
+import { useEffect, useRef, useState } from 'react'
 
 function About() {
+  const [counters, setCounters] = useState({ years: 0, clients: 0, quality: 0 })
+  const [hasAnimated, setHasAnimated] = useState(false)
+  const sectionRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !hasAnimated) {
+          setHasAnimated(true)
+          animateCounters()
+        }
+      },
+      { threshold: 0.3 }
+    )
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current)
+    }
+
+    return () => observer.disconnect()
+  }, [hasAnimated])
+
+  const animateCounters = () => {
+    const duration = 2000
+    const steps = 60
+    const stepDuration = duration / steps
+
+    let currentStep = 0
+
+    const interval = setInterval(() => {
+      currentStep++
+      const progress = currentStep / steps
+
+      setCounters({
+        years: Math.floor(10 * progress),
+        clients: Math.floor(500 * progress),
+        quality: Math.floor(100 * progress)
+      })
+
+      if (currentStep >= steps) {
+        clearInterval(interval)
+        setCounters({ years: 10, clients: 500, quality: 100 })
+      }
+    }, stepDuration)
+  }
+
   return (
-    <section id="about" className="about">
+    <section id="about" className="about" ref={sectionRef}>
       <div className="container">
         <h2>Über Uns</h2>
 
@@ -21,15 +69,15 @@ function About() {
 
             <div className="about-values">
               <div className="value-item">
-                <div className="value-number">10+</div>
+                <div className="value-number">{counters.years}+</div>
                 <div className="value-label">Jahre Erfahrung</div>
               </div>
               <div className="value-item">
-                <div className="value-number">500+</div>
+                <div className="value-number">{counters.clients}+</div>
                 <div className="value-label">Zufriedene Kunden</div>
               </div>
               <div className="value-item">
-                <div className="value-number">100%</div>
+                <div className="value-number">{counters.quality}%</div>
                 <div className="value-label">Qualitätsgarantie</div>
               </div>
             </div>
@@ -47,22 +95,22 @@ function About() {
           <h3>Warum Sofi's Reinigung?</h3>
           <div className="benefits-grid">
             <div className="benefit">
-              <span className="benefit-icon">✓</span>
+              <span className="benefit-icon"><CheckIcon /></span>
               <h4>Erfahrenes Team</h4>
               <p>Geschulte Mitarbeiter mit langjähriger Expertise</p>
             </div>
             <div className="benefit">
-              <span className="benefit-icon">✓</span>
+              <span className="benefit-icon"><CheckIcon /></span>
               <h4>Umweltfreundlich</h4>
               <p>Verwendung umweltschonender Reinigungsmittel</p>
             </div>
             <div className="benefit">
-              <span className="benefit-icon">✓</span>
+              <span className="benefit-icon"><CheckIcon /></span>
               <h4>Flexible Termine</h4>
               <p>Anpassung an Ihre zeitlichen Bedürfnisse</p>
             </div>
             <div className="benefit">
-              <span className="benefit-icon">✓</span>
+              <span className="benefit-icon"><CheckIcon /></span>
               <h4>Fair & Transparent</h4>
               <p>Klare Preise ohne versteckte Kosten</p>
             </div>
