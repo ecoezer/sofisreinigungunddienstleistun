@@ -39,14 +39,13 @@ function Footer() {
           <ul>
             <li>📞 +49 123 456 7890</li>
             <li>✉️ info@sofis-reinigung.de</li>
-            <li>📍 Dr.-Jasper-Straße 6a</li>
-            <li>31073 Delligsen</li>
+            <li>📍 Dr.-Jasper-Straße 6a, 31073 Delligsen</li>
           </ul>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; {currentYear} Sofi's Reinigung und Dienstleistungen. Alle Rechte vorbehalten.</p>
+        <p>&copy; {currentYear} Sofi's Reinigung und Dienstleistungen. Alle Rechte vorbehalten. | <a href="#impressum">Impressum</a></p>
       </div>
     </footer>
   )

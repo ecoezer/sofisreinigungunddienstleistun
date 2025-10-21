@@ -116,6 +116,17 @@
   letter-spacing: 0.01em;
 }
 
+.footer-bottom a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-bottom a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
   .footer {
     padding: 2rem 1.5rem 1rem;
