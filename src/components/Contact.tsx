@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import './Contact.css'
 import { PhoneIcon, MailIcon, LocationIcon, ClockIcon } from './Icons'
-import { supabase } from '../lib/supabase'
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -13,8 +12,6 @@ function Contact() {
   })
 
   const [submitted, setSubmitted] = useState(false)
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [error, setError] = useState<string | null>(null)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -23,43 +20,20 @@ function Contact() {
     })
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    setIsSubmitting(true)
-    setError(null)
+    setSubmitted(true)
 
-    try {
-      const { error: submitError } = await supabase
-        .from('contact_submissions')
-        .insert([
-          {
-            name: formData.name,
-            email: formData.email,
-            phone: formData.phone || null,
-            service: formData.service || null,
-            message: formData.message
-          }
-        ])
-
-      if (submitError) throw submitError
-
-      setSubmitted(true)
-      setTimeout(() => {
-        setSubmitted(false)
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          service: '',
-          message: ''
-        })
-      }, 5000)
-    } catch (err) {
-      console.error('Error submitting form:', err)
-      setError('Es gab einen Fehler beim Senden Ihrer Nachricht. Bitte versuchen Sie es erneut.')
-    } finally {
-      setIsSubmitting(false)
-    }
+    setTimeout(() => {
+      setSubmitted(false)
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        service: '',
+        message: ''
+      })
+    }, 5000)
   }
 
   return (
@@ -118,13 +92,7 @@ function Contact() {
                 <p>Ihre Nachricht wurde erfolgreich gesendet. Wir werden uns in Kürze bei Ihnen melden.</p>
               </div>
             ) : (
-              <>
-                {error && (
-                  <div className="error-message">
-                    <p>{error}</p>
-                  </div>
-                )}
-                <form className="contact-form" onSubmit={handleSubmit}>
+              <form className="contact-form" onSubmit={handleSubmit}>
                 <div className="form-group">
                   <label htmlFor="name">Name *</label>
                   <input
@@ -190,11 +158,10 @@ function Contact() {
                   ></textarea>
                 </div>
 
-                <button type="submit" className="submit-button" disabled={isSubmitting}>
-                  {isSubmitting ? 'Wird gesendet...' : 'Nachricht senden'}
+                <button type="submit" className="submit-button">
+                  Nachricht senden
                 </button>
               </form>
-              </>
             )}
           </div>
         </div>
