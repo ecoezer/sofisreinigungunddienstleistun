@@ -68,7 +68,7 @@ function Contact() {
               <span className="info-icon"><LocationIcon /></span>
               <div>
                 <h4>Adresse</h4>
-                <p>Musterstraße 123<br />12345 Musterstadt</p>
+                <p>Dr.-Jasper-Straße 6a<br />31073 Delligsen</p>
               </div>
             </div>
 
