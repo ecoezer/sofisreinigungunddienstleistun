@@ -39,8 +39,8 @@ function Footer() {
           <ul>
             <li>📞 +49 123 456 7890</li>
             <li>✉️ info@sofis-reinigung.de</li>
-            <li>📍 Musterstraße 123</li>
-            <li>12345 Musterstadt</li>
+            <li>📍 Dr.-Jasper-Straße 6a</li>
+            <li>31073 Delligsen</li>
           </ul>
         </div>
       </div>
