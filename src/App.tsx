@@ -5,7 +5,6 @@ import TrustBadges from './components/TrustBadges'
 import About from './components/About'
 import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
-import Impressum from './components/Impressum'
 import Footer from './components/Footer'
 import FloatingActionButton from './components/FloatingActionButton'
 import './App.css'
@@ -21,7 +20,6 @@ function App() {
         <About />
         <Testimonials />
         <Contact />
-        <Impressum />
       </main>
       <Footer />
       <FloatingActionButton />
