@@ -45,7 +45,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; {currentYear} Sofi's Reinigung und Dienstleistungen. Alle Rechte vorbehalten. | <a href="#impressum">Impressum</a></p>
+        <p>&copy; {currentYear} Sofi's Reinigung und Dienstleistungen. Alle Rechte vorbehalten. | <a href="#impressum">Impressum</a> | <a href="#datenschutz">Datenschutz</a></p>
       </div>
     </footer>
   )
