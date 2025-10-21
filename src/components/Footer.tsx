@@ -21,6 +21,7 @@ function Footer() {
             <li><a href="#services">Dienstleistungen</a></li>
             <li><a href="#about">Über uns</a></li>
             <li><a href="#contact">Kontakt</a></li>
+            <li><a href="#impressum">Impressum</a></li>
           </ul>
         </div>
 
@@ -31,6 +32,7 @@ function Footer() {
             <li>Büroreinigung</li>
             <li>Fensterreinigung</li>
             <li>Grundreinigung</li>
+            <li><a href="#datenschutz">Datenschutz</a></li>
           </ul>
         </div>
 
