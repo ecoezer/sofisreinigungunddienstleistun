@@ -1,25 +1,29 @@
 .contact {
-  background: white;
-  padding: 5rem 3rem;
+  background: var(--bg-primary);
+  padding: 6rem 3rem;
+  position: relative;
 }
 
 .contact h2 {
-  color: #1e4d8b;
-  font-size: 2.5rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 2.75rem;
   font-weight: 700;
-  text-transform: uppercase;
   margin-bottom: 1rem;
+  letter-spacing: -0.02em;
 }
 
 .contact-intro {
   text-align: center;
-  font-size: 1.125rem;
-  color: #333;
-  margin-bottom: 3rem;
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  margin-bottom: 4rem;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
 .contact-content {
@@ -30,27 +34,30 @@
 }
 
 .contact-info h3 {
-  font-size: 1.5rem;
-  color: #1e4d8b;
+  font-size: 1.625rem;
+  color: var(--primary);
   margin-bottom: 2rem;
   font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 .info-item {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  margin-bottom: 1rem;
-  padding: 1rem;
+  margin-bottom: 1.25rem;
+  padding: 1.25rem;
   background: white;
-  border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  transition: all 0.2s ease;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .info-item:hover {
-  border-color: rgba(0, 0, 0, 0.12);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border-color: var(--primary);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.1);
+  transform: translateX(4px);
 }
 
 .info-icon {
@@ -61,22 +68,23 @@
 
 .info-item h4 {
   font-size: 1rem;
-  color: #1e4d8b;
+  color: var(--primary);
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
 
 .info-item p {
-  color: #555;
-  line-height: 1.6;
+  color: var(--text-secondary);
+  line-height: 1.7;
   font-size: 1rem;
 }
 
 .contact-form-wrapper {
   background: white;
-  padding: 2rem;
-  border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 2.5rem;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .contact-form {
@@ -92,30 +100,36 @@
 
 .form-group label {
   font-weight: 500;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin-bottom: 0.5rem;
   font-size: 0.9375rem;
+  transition: color 0.2s ease;
 }
 
 .form-group input,
 .form-group textarea,
 .form-group select {
-  padding: 0.75rem;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 6px;
-  font-size: 0.9375rem;
+  padding: 0.875rem 1rem;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  font-size: 1rem;
   font-family: inherit;
-  transition: all 0.2s ease;
-  background: #fafafa;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: var(--bg-secondary);
 }
 
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
   outline: none;
-  border-color: #1e4d8b;
+  border-color: var(--primary);
   background: white;
-  box-shadow: 0 0 0 3px rgba(30, 77, 139, 0.1);
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+  transform: translateY(-1px);
+}
+
+.form-group:focus-within label {
+  color: var(--primary);
 }
 
 .form-group textarea {
@@ -124,28 +138,45 @@
 }
 
 .submit-button {
-  background: #1e4d8b;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
   color: white;
   border: none;
-  padding: 1rem 2.5rem;
-  font-size: 1rem;
+  padding: 1.125rem 2.75rem;
+  font-size: 1.0625rem;
   font-weight: 600;
-  border-radius: 4px;
+  border-radius: 12px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 1.5rem;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
 }
 
 .submit-button:hover {
-  background: #163d6f;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(30, 77, 139, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4);
+}
+
+.submit-button:hover::before {
+  left: 100%;
 }
 
 .submit-button:active {
-  transform: translateY(0);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
 }
 
 .success-message {
@@ -157,37 +188,41 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 72px;
-  height: 72px;
-  background: #1e4d8b;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
   color: white;
   border-radius: 50%;
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
-  animation: scaleIn 0.4s ease;
+  animation: scaleIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);
 }
 
 .success-message h3 {
-  font-size: 1.75rem;
-  color: #1e4d8b;
+  font-size: 1.875rem;
+  color: var(--primary);
   margin-bottom: 0.75rem;
   font-weight: 700;
 }
 
 .success-message p {
-  font-size: 1rem;
-  color: #525252;
-  line-height: 1.5;
+  font-size: 1.0625rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
 }
 
 @keyframes scaleIn {
-  from {
-    transform: scale(0.8);
+  0% {
+    transform: scale(0.5) rotate(-10deg);
     opacity: 0;
   }
-  to {
-    transform: scale(1);
+  50% {
+    transform: scale(1.05) rotate(5deg);
+  }
+  100% {
+    transform: scale(1) rotate(0);
     opacity: 1;
   }
 }

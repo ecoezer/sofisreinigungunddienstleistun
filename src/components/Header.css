@@ -1,10 +1,13 @@
 .header {
-  background: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
   z-index: 1000;
   transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(229, 231, 235, 0.5);
 }
 
 .header-container {
@@ -19,9 +22,11 @@
 .logo h1 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #1e4d8b;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.02em;
 }
 
 .menu-toggle {
@@ -37,7 +42,7 @@
 .menu-toggle span {
   width: 22px;
   height: 2px;
-  background: #1e4d8b;
+  background: var(--primary);
   border-radius: 2px;
   transition: all 0.25s ease;
 }
@@ -63,28 +68,37 @@
 .nav button {
   background: none;
   border: none;
-  color: #333;
+  color: var(--text-primary);
   font-size: 1rem;
   cursor: pointer;
   padding: 0.75rem 1.5rem;
-  transition: all 0.2s ease;
-  border-radius: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 8px;
   font-weight: 500;
   position: relative;
 }
 
 .nav button:hover {
-  color: #1e4d8b;
+  color: var(--primary);
+  background: rgba(16, 185, 129, 0.05);
+  transform: translateY(-1px);
 }
 
-.nav button:hover::after {
+.nav button::before {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 1.5rem;
-  right: 1.5rem;
-  height: 3px;
-  background: #1e4d8b;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 24px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  border-radius: 2px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav button:hover::before {
+  transform: translateX(-50%) scaleX(1);
 }
 
 @media (max-width: 968px) {
