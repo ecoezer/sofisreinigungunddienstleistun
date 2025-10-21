@@ -1,75 +1,81 @@
 .contact {
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  background: #fafafa;
 }
 
 .contact-intro {
   text-align: center;
-  font-size: 1.2rem;
-  color: #666;
-  margin-bottom: 3rem;
-  max-width: 700px;
+  font-size: 1rem;
+  color: #525252;
+  margin-bottom: 2.5rem;
+  max-width: 640px;
   margin-left: auto;
   margin-right: auto;
+  line-height: 1.6;
 }
 
 .contact-content {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  gap: 4rem;
-  margin-top: 3rem;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
 }
 
 .contact-info h3 {
-  font-size: 1.8rem;
-  color: #0066cc;
-  margin-bottom: 2rem;
+  font-size: 1.25rem;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 .info-item {
   display: flex;
   align-items: flex-start;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-  padding: 1.5rem;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
   background: white;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease;
 }
 
 .info-item:hover {
-  transform: translateX(5px);
+  border-color: rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .info-icon {
-  font-size: 2rem;
-  min-width: 40px;
+  font-size: 1.5rem;
+  min-width: 32px;
   text-align: center;
 }
 
 .info-item h4 {
-  font-size: 1.1rem;
-  color: #333;
-  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: #1a1a1a;
+  margin-bottom: 0.25rem;
   font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .info-item p {
-  color: #666;
-  line-height: 1.6;
+  color: #525252;
+  line-height: 1.5;
+  font-size: 0.9375rem;
 }
 
 .contact-form-wrapper {
   background: white;
-  padding: 3rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .form-group {
@@ -78,52 +84,53 @@
 }
 
 .form-group label {
-  font-weight: 600;
-  color: #333;
+  font-weight: 500;
+  color: #1a1a1a;
   margin-bottom: 0.5rem;
-  font-size: 1rem;
+  font-size: 0.9375rem;
 }
 
 .form-group input,
 .form-group textarea,
 .form-group select {
-  padding: 0.9rem;
-  border: 2px solid #e0e0e0;
+  padding: 0.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 6px;
-  font-size: 1rem;
+  font-size: 0.9375rem;
   font-family: inherit;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
+  background: #fafafa;
 }
 
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
   outline: none;
-  border-color: #0066cc;
-  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+  border-color: #1a1a1a;
+  background: white;
 }
 
 .form-group textarea {
   resize: vertical;
-  min-height: 120px;
+  min-height: 100px;
 }
 
 .submit-button {
-  background: linear-gradient(135deg, #0066cc 0%, #004999 100%);
+  background: #1a1a1a;
   color: white;
   border: none;
-  padding: 1.2rem 2.5rem;
-  font-size: 1.1rem;
-  font-weight: 600;
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
   border-radius: 6px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 1rem;
+  transition: all 0.2s ease;
+  margin-top: 0.5rem;
 }
 
 .submit-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 102, 204, 0.3);
+  background: #2a2a2a;
+  transform: translateY(-1px);
 }
 
 .submit-button:active {
@@ -132,42 +139,46 @@
 
 .success-message {
   text-align: center;
-  padding: 3rem;
+  padding: 2.5rem;
 }
 
 .success-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 80px;
-  height: 80px;
-  background: #28a745;
+  width: 64px;
+  height: 64px;
+  background: #22c55e;
   color: white;
-  border-radius: 50%;
-  font-size: 3rem;
+  border-radius: 8px;
+  font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 1.5rem;
-  animation: scaleIn 0.5s ease;
+  margin-bottom: 1rem;
+  animation: scaleIn 0.4s ease;
 }
 
 .success-message h3 {
-  font-size: 2rem;
-  color: #28a745;
-  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 .success-message p {
-  font-size: 1.1rem;
-  color: #666;
-  line-height: 1.6;
+  font-size: 1rem;
+  color: #525252;
+  line-height: 1.5;
 }
 
 @keyframes scaleIn {
   from {
-    transform: scale(0);
+    transform: scale(0.8);
+    opacity: 0;
   }
   to {
     transform: scale(1);
+    opacity: 1;
   }
 }
 
