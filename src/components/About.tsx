@@ -94,22 +94,22 @@ function About() {
         <div className="why-us">
           <h3>Warum Sofi's Reinigung?</h3>
           <div className="benefits-grid">
-            <div className="benefit">
+            <div className="benefit benefit-orange">
               <span className="benefit-icon"><CheckIcon /></span>
               <h4>Erfahrenes Team</h4>
               <p>Geschulte Mitarbeiter mit langjähriger Expertise</p>
             </div>
-            <div className="benefit">
+            <div className="benefit benefit-blue">
               <span className="benefit-icon"><CheckIcon /></span>
               <h4>Umweltfreundlich</h4>
               <p>Verwendung umweltschonender Reinigungsmittel</p>
             </div>
-            <div className="benefit">
+            <div className="benefit benefit-purple">
               <span className="benefit-icon"><CheckIcon /></span>
               <h4>Flexible Termine</h4>
               <p>Anpassung an Ihre zeitlichen Bedürfnisse</p>
             </div>
-            <div className="benefit">
+            <div className="benefit benefit-pink">
               <span className="benefit-icon"><CheckIcon /></span>
               <h4>Fair & Transparent</h4>
               <p>Klare Preise ohne versteckte Kosten</p>

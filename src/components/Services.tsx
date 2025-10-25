@@ -6,32 +6,38 @@ function Services() {
     {
       title: 'Haushaltsreinigung',
       description: 'Gründliche Reinigung Ihrer Wohnräume, Küche, Badezimmer und aller Wohnbereiche.',
-      Icon: HomeIcon
+      Icon: HomeIcon,
+      color: 'orange'
     },
     {
       title: 'Büroreinigung',
       description: 'Professionelle Reinigung von Büros, Besprechungsräumen und Arbeitsbereichen.',
-      Icon: OfficeIcon
+      Icon: OfficeIcon,
+      color: 'blue'
     },
     {
       title: 'Fensterreinigung',
       description: 'Streifenfreie Reinigung Ihrer Fenster innen und außen für klare Sicht.',
-      Icon: WindowIcon
+      Icon: WindowIcon,
+      color: 'cyan'
     },
     {
       title: 'Grundreinigung',
       description: 'Intensive Tiefenreinigung für Umzug, Renovierung oder nach Bauarbeiten.',
-      Icon: SparkleIcon
+      Icon: SparkleIcon,
+      color: 'purple'
     },
     {
       title: 'Teppichreinigung',
       description: 'Schonende und effektive Reinigung von Teppichen und Polstermöbeln.',
-      Icon: CarpetIcon
+      Icon: CarpetIcon,
+      color: 'pink'
     },
     {
       title: 'Bügel-Service',
       description: 'Professionelles Bügeln Ihrer Wäsche und Textilien nach höchsten Standards.',
-      Icon: IronIcon
+      Icon: IronIcon,
+      color: 'green'
     }
   ]
 
@@ -45,7 +51,7 @@ function Services() {
 
         <div className="services-grid">
           {services.map((service, index) => (
-            <div key={index} className="service-card">
+            <div key={index} className={`service-card service-card-${service.color}`}>
               <div className="service-icon">
                 <service.Icon />
               </div>

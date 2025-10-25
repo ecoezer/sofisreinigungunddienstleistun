@@ -5,7 +5,7 @@
 }
 
 .about h2 {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 50%, #10b981 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -54,7 +54,7 @@
 .value-number {
   font-size: 2.75rem;
   font-weight: 800;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  background: linear-gradient(135deg, #ff6b35 0%, #ec4899 50%, #a855f7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -177,6 +177,26 @@
   box-shadow: 0 4px 12px rgba(255, 107, 53, 0.35);
 }
 
+.benefit-orange .benefit-icon {
+  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.35);
+}
+
+.benefit-blue .benefit-icon {
+  background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.35);
+}
+
+.benefit-purple .benefit-icon {
+  background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.35);
+}
+
+.benefit-pink .benefit-icon {
+  background: linear-gradient(135deg, #ec4899 0%, #f97316 100%);
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.35);
+}
+
 .benefit-icon svg {
   width: 32px;
   height: 32px;
@@ -184,7 +204,22 @@
 
 .benefit:hover .benefit-icon {
   transform: scale(1.1) rotate(5deg);
+}
+
+.benefit-orange:hover .benefit-icon {
   box-shadow: 0 8px 20px rgba(255, 107, 53, 0.5);
+}
+
+.benefit-blue:hover .benefit-icon {
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.5);
+}
+
+.benefit-purple:hover .benefit-icon {
+  box-shadow: 0 8px 20px rgba(168, 85, 247, 0.5);
+}
+
+.benefit-pink:hover .benefit-icon {
+  box-shadow: 0 8px 20px rgba(236, 72, 153, 0.5);
 }
 
 .benefit h4 {
