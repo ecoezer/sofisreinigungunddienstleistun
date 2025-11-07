@@ -1,55 +1,46 @@
 import './Services.css'
-import { HomeIcon, OfficeIcon, WindowIcon, SparkleIcon, CarpetIcon, IronIcon } from './Icons'
 
 function Services() {
   const services = [
     {
       title: 'Haushaltsreinigung',
       description: 'Gründliche Reinigung Ihrer Wohnräume, Küche, Badezimmer und aller Wohnbereiche.',
-      Icon: HomeIcon,
-      color: 'orange'
+      image: 'https://images.pexels.com/photos/4239037/pexels-photo-4239037.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
     {
       title: 'Büroreinigung',
       description: 'Professionelle Reinigung von Büros, Besprechungsräumen und Arbeitsbereichen.',
-      Icon: OfficeIcon,
-      color: 'blue'
+      image: 'https://images.pexels.com/photos/6195125/pexels-photo-6195125.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
     {
       title: 'Fensterreinigung',
       description: 'Streifenfreie Reinigung Ihrer Fenster innen und außen für klare Sicht.',
-      Icon: WindowIcon,
-      color: 'cyan'
+      image: 'https://images.pexels.com/photos/5217882/pexels-photo-5217882.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
     {
       title: 'Grundreinigung',
       description: 'Intensive Tiefenreinigung für Umzug, Renovierung oder nach Bauarbeiten.',
-      Icon: SparkleIcon,
-      color: 'purple'
+      image: 'https://images.pexels.com/photos/4239146/pexels-photo-4239146.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
     {
       title: 'Teppichreinigung',
       description: 'Schonende und effektive Reinigung von Teppichen und Polstermöbeln.',
-      Icon: CarpetIcon,
-      color: 'pink'
+      image: 'https://images.pexels.com/photos/6195122/pexels-photo-6195122.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
     {
       title: 'Bügel-Service',
       description: 'Professionelles Bügeln Ihrer Wäsche und Textilien nach höchsten Standards.',
-      Icon: IronIcon,
-      color: 'green'
+      image: 'https://images.pexels.com/photos/7084308/pexels-photo-7084308.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
     {
       title: 'Entrümpelungen mit Endreinigung',
       description: 'Professionelle Entrümpelung von Räumen mit abschließender gründlicher Reinigung.',
-      Icon: SparkleIcon,
-      color: 'red'
+      image: 'https://images.pexels.com/photos/5591663/pexels-photo-5591663.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
     {
       title: 'Haushaltsauflösungen',
       description: 'Vollständige Haushaltsauflösung mit Entsorgung und anschließender Reinigung.',
-      Icon: HomeIcon,
-      color: 'amber'
+      image: 'https://images.pexels.com/photos/4246115/pexels-photo-4246115.jpeg?auto=compress&cs=tinysrgb&w=800'
     }
   ]
 
@@ -63,12 +54,14 @@ function Services() {
 
         <div className="services-grid">
           {services.map((service, index) => (
-            <div key={index} className={`service-card service-card-${service.color}`}>
-              <div className="service-icon">
-                <service.Icon />
+            <div key={index} className="service-card">
+              <div className="service-image">
+                <img src={service.image} alt={service.title} />
               </div>
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
+              <div className="service-content">
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+              </div>
             </div>
           ))}
         </div>
