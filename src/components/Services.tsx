@@ -30,7 +30,7 @@ function Services() {
     {
       title: 'Bügel-Service',
       description: 'Professionelles Bügeln Ihrer Wäsche und Textilien nach höchsten Standards.',
-      image: 'https://images.pexels.com/photos/3962645/pexels-photo-3962645.jpeg?auto=compress&cs=tinysrgb&w=800'
+      image: 'https://images.pexels.com/photos/4107221/pexels-photo-4107221.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
     {
       title: 'Entrümpelungen mit Endreinigung',
