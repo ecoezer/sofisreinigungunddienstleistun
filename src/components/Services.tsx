@@ -38,6 +38,18 @@ function Services() {
       description: 'Professionelles Bügeln Ihrer Wäsche und Textilien nach höchsten Standards.',
       Icon: IronIcon,
       color: 'green'
+    },
+    {
+      title: 'Entrümpelungen mit Endreinigung',
+      description: 'Professionelle Entrümpelung von Räumen mit abschließender gründlicher Reinigung.',
+      Icon: SparkleIcon,
+      color: 'red'
+    },
+    {
+      title: 'Haushaltsauflösungen',
+      description: 'Vollständige Haushaltsauflösung mit Entsorgung und anschließender Reinigung.',
+      Icon: HomeIcon,
+      color: 'amber'
     }
   ]
 
