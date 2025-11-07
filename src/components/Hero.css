@@ -87,7 +87,7 @@
 }
 
 .cta-button {
-  background: linear-gradient(145deg, #dc2626 0%, #b91c1c 50%, #991b1b 100%);
+  background: #dc2626;
   color: white;
   border: none;
   padding: 1.25rem 3rem;
@@ -143,7 +143,7 @@
     0 10px 25px rgba(0, 0, 0, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.3),
     inset 0 -2px 0 rgba(0, 0, 0, 0.2);
-  background: linear-gradient(145deg, #ef4444 0%, #dc2626 50%, #b91c1c 100%);
+  background: #ef4444;
 }
 
 .cta-button:hover::before {
