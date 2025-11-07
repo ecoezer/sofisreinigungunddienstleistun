@@ -76,8 +76,8 @@
 }
 
 .nav button:hover {
-  color: var(--primary);
-  background: rgba(220, 38, 38, 0.08);
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.08);
   transform: translateY(-1px);
 }
 
