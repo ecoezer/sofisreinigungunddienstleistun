@@ -30,12 +30,12 @@ function Services() {
     {
       title: 'Bügel-Service',
       description: 'Professionelles Bügeln Ihrer Wäsche und Textilien nach höchsten Standards.',
-      image: 'https://images.pexels.com/photos/7084308/pexels-photo-7084308.jpeg?auto=compress&cs=tinysrgb&w=800'
+      image: 'https://images.pexels.com/photos/3962645/pexels-photo-3962645.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
     {
       title: 'Entrümpelungen mit Endreinigung',
       description: 'Professionelle Entrümpelung von Räumen mit abschließender gründlicher Reinigung.',
-      image: 'https://images.pexels.com/photos/5591663/pexels-photo-5591663.jpeg?auto=compress&cs=tinysrgb&w=800'
+      image: 'https://images.pexels.com/photos/5407736/pexels-photo-5407736.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
     {
       title: 'Haushaltsauflösungen',
