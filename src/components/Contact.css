@@ -134,40 +134,41 @@
 }
 
 .form-group label {
-  font-weight: 500;
-  color: #64748b;
-  margin-bottom: 0.5rem;
-  font-size: 0.875rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+  font-size: 0.9375rem;
   letter-spacing: 0.01em;
   transition: color 0.2s ease;
+  display: block;
 }
 
 .form-group input,
 .form-group textarea,
 .form-group select {
-  padding: 0.75rem 0;
-  border: none;
-  border-bottom: 1px solid #e2e8f0;
-  border-radius: 0;
+  padding: 0.875rem 1rem;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
   font-size: 1rem;
   font-family: inherit;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  background: transparent;
+  background: white;
   color: #0f172a;
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: #94a3b8;
+  color: #cbd5e1;
+  font-weight: 400;
 }
 
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
   outline: none;
-  border-bottom-color: var(--primary);
-  background: transparent;
-  box-shadow: none;
+  border-color: var(--primary);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
 }
 
 .form-group:focus-within label {
@@ -176,17 +177,18 @@
 
 .form-group textarea {
   resize: vertical;
-  min-height: 100px;
+  min-height: 120px;
   line-height: 1.6;
+  font-weight: 400;
 }
 
 .form-group select {
   cursor: pointer;
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2364748b' d='M10.293 3.293 6 7.586 1.707 3.293A1 1 0 0 0 .293 4.707l5 5a1 1 0 0 0 1.414 0l5-5a1 1 0 1 0-1.414-1.414Z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%230f172a' d='M10.293 3.293 6 7.586 1.707 3.293A1 1 0 0 0 .293 4.707l5 5a1 1 0 0 0 1.414 0l5-5a1 1 0 1 0-1.414-1.414Z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right 0 center;
-  padding-right: 1.5rem;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
 }
 
 .submit-button {
