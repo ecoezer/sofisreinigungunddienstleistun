@@ -37,14 +37,14 @@ function About() {
       const progress = currentStep / steps
 
       setCounters({
-        years: Math.floor(3 * progress),
-        clients: Math.floor(100 * progress),
+        years: Math.floor(2 * progress),
+        clients: Math.floor(50 * progress),
         quality: Math.floor(100 * progress)
       })
 
       if (currentStep >= steps) {
         clearInterval(interval)
-        setCounters({ years: 3, clients: 100, quality: 100 })
+        setCounters({ years: 2, clients: 50, quality: 100 })
       }
     }, stepDuration)
   }
