@@ -132,13 +132,15 @@
     text-align: left;
     border-radius: 0;
     border-bottom: 1px solid #f0f0f0;
+    color: var(--text-primary);
   }
 
   .nav button:hover {
     background: #f8f8f8;
+    color: var(--primary);
   }
 
-  .nav button:hover::after {
+  .nav button:hover::before {
     display: none;
   }
 }
