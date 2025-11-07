@@ -35,7 +35,7 @@ function Services() {
     {
       title: 'Entrümpelungen mit Endreinigung',
       description: 'Professionelle Entrümpelung von Räumen mit abschließender gründlicher Reinigung.',
-      image: 'https://images.pexels.com/photos/5407736/pexels-photo-5407736.jpeg?auto=compress&cs=tinysrgb&w=800'
+      image: 'https://images.pexels.com/photos/3962623/pexels-photo-3962623.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
     {
       title: 'Haushaltsauflösungen',
