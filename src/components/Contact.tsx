@@ -143,6 +143,8 @@ function Contact() {
                     <option value="grundreinigung">Grundreinigung</option>
                     <option value="teppichreinigung">Teppichreinigung</option>
                     <option value="buegel-service">Bügel-Service</option>
+                    <option value="entruempelungen">Entrümpelungen mit Endreinigung</option>
+                    <option value="haushaltsaufloesungen">Haushaltsauflösungen</option>
                   </select>
                 </div>
 
