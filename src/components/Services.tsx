@@ -15,7 +15,7 @@ function Services() {
     {
       title: 'Fensterreinigung',
       description: 'Streifenfreie Reinigung Ihrer Fenster innen und außen für klare Sicht.',
-      image: 'https://images.pexels.com/photos/5217882/pexels-photo-5217882.jpeg?auto=compress&cs=tinysrgb&w=800'
+      image: 'https://images.pexels.com/photos/713297/pexels-photo-713297.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
     {
       title: 'Grundreinigung',
