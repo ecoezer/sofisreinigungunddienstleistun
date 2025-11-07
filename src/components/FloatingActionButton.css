@@ -7,13 +7,15 @@
   border-radius: 50%;
   background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
   border: none;
-  box-shadow: 0 8px 24px rgba(220, 38, 38, 0.4);
+  box-shadow: 0 8px 24px rgba(220, 38, 38, 0.4), 0 0 0 1px transparent;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 999;
+  z-index: 9999;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  isolation: isolate;
+  will-change: transform, box-shadow;
 }
 
 .fab-main:hover {
@@ -32,11 +34,12 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  z-index: 998;
+  z-index: 9998;
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateY(20px);
+  isolation: isolate;
 }
 
 .fab-menu.open {
