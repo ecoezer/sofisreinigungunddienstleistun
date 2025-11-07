@@ -114,18 +114,18 @@
 
 .service-card h3 {
   font-size: 1.375rem;
-  color: var(--primary);
+  color: white;
   margin-bottom: 1rem;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .service-card:hover h3 {
-  color: var(--primary-dark);
+  color: #d4af37;
 }
 
 .service-card p {
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.9);
   line-height: 1.7;
   font-size: 1rem;
 }
