@@ -37,7 +37,7 @@ function Footer() {
         <div className="footer-section">
           <h4>Kontakt</h4>
           <ul>
-            <li>📞 +49 123 456 7890</li>
+            <li>📞 +49 176 72613684</li>
             <li>✉️ info@sofis-reinigung.de</li>
             <li>📍 Dr.-Jasper-Straße 6a, 31073 Delligsen</li>
           </ul>

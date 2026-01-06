@@ -52,7 +52,7 @@ function Contact() {
               <span className="info-icon"><PhoneIcon /></span>
               <div>
                 <h4>Telefon</h4>
-                <p>+49 123 456 7890</p>
+                <p>+49 176 72613684</p>
               </div>
             </div>
 
