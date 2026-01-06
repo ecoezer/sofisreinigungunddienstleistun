@@ -13,7 +13,7 @@ function FloatingActionButton() {
   }
 
   const callPhone = () => {
-    window.location.href = 'tel:+491234567890'
+    window.location.href = 'tel:+4917672613684'
   }
 
   const sendEmail = () => {
